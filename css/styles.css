@@ -62,10 +62,10 @@ button {
 .header-navigation {
     color: #2e2f42;
     background: #fff;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 1158px;
+    display: flex;
+    align-items: center;
 }
 
 .header-logo {
@@ -87,14 +87,16 @@ button {
 .header-navigation-list {
     display: flex;
     gap: 40px;
+    list-style: none;
+    margin: 0;
     padding: 0;
 }
 
 .header-navigation-link {
-    font-weight: 500;
-    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    font-weight: 500;
+    font-size: 16px;
     color: #2e2f42;
     padding: 24px 0;
 }
@@ -118,9 +120,21 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    gap: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-list {
     display: flex;
     gap: 40px;
-    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-item {
+    margin-right: 0;
 }
 
 .contact-link {
@@ -142,6 +156,8 @@ button {
 }
 
 .main-content {}
+
+/* 1 section */
 
 .hero {
     background-color: #2e2f42;
@@ -178,20 +194,35 @@ button {
     background-color: #404bbf;
 }
 
+/* 2 section */
+
 .features {
     padding-top: 120px;
     padding-bottom: 120px;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 .features-list {
     display: flex;
     gap: 24px;
+    list-style: none;
+    margin: 0;
     padding: 0;
 }
 
 .feature-item {
-    width: calc((100% - 72px) / 4);
     display: block;
+    flex-basis: calc((100% - 3 * 24px) / 4);
 }
 
 .feature-title {
@@ -209,11 +240,18 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    margin: 0;
 }
 
+.feature-item:last-child {
+    margin-right: 0;
+}
+
+/* 3 section */
+
 .team {
-    background-color: #f4f4fd;
-    padding: 120px 0;
+    padding: 80px 0;
+    background-color: #f8f9fd;
 }
 
 .team-title {
@@ -221,38 +259,50 @@ button {
     font-size: 36px;
     line-height: 111%;
     letter-spacing: 0.02em;
-    text-align: center;
     text-transform: capitalize;
     color: #2e2f42;
-    margin-bottom: 72px;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .team-list {
     display: flex;
     justify-content: space-between;
     list-style: none;
+    gap: 24px;
+    margin: 0;
     padding: 0;
-    margin-right: 156px;
-    margin-left: 156px;
-    
 }
 
 .team-member {
     background-color: #ffffff;
     margin-right: 24px 0;
-    
+    flex-basis: calc((100% - 72px) / 4);
+    text-align: center;
+    list-style: none;
+
+}
+
+.team-member:first-child {
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-member-image {
     display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 32px;
 }
 
 .team-member-name {
-    font-weight: 500;
-    font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-align: center;
 }
 
 .team-member-role {
@@ -260,7 +310,18 @@ button {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #434455;
+    color: #6c757d;
+    text-align: center;
+}
+
+.team-member:last-child {
+    margin-right: 0;
+}
+
+/* 4 section */
+
+.portfolio {
+    padding: 120px 0;
 }
 
 .portfolio-title {
@@ -271,7 +332,7 @@ button {
     color: #2e2f42;
     text-align: center;
     text-transform: capitalize;
-    margin-bottom: 72px;
+    margin-bottom: 60px;
 }
 
 .portfolio-list {
@@ -280,16 +341,33 @@ button {
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    column-gap: 24px;
+    row-gap: 48px;
     padding: 0;
+    margin: 0;
 }
 
 .portfolio-item {
-    border-bottom: 1px solid #e0e0e0;
-    margin-bottom: 30px;
+    width: calc((100% - 48px) / 3);
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+    margin-bottom: 48px;
+}
+
+.portfolio-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.portfolio-item:nth-last-child(-n+3) {
+    margin-bottom: 0;
 }
 
 .portfolio-image {
     display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
 }
 
 .portfolio-item-title {
@@ -298,6 +376,7 @@ button {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .portfolio-item-description {
@@ -305,8 +384,10 @@ button {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #434455;
+    color: #888;
 }
+
+/* footer */
 
 .footer {
     background: #2e2f42;
