@@ -59,6 +59,7 @@ button {
 }
 .header-container {
     display: flex;
+    width: 1158px;
 }
 
 .header-navigation {
