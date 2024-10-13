@@ -287,9 +287,7 @@ button {
     border-radius: 0px 0px 4px 4px;
 }
 
-.team-info {
-    padding: 32px 0; 
-}
+
 
 .team-member-image {
     display: block;
@@ -297,6 +295,10 @@ button {
     height: auto;
     border-radius: 4px;
     margin-bottom: 32px;
+}
+
+.team-info {
+    padding: 32px 0; 
 }
 
 .team-member-name {
