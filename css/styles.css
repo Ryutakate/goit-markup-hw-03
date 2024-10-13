@@ -68,6 +68,7 @@ button {
     justify-content: space-between;
     display: flex;
     align-items: center;
+    margin-right: auto;
 }
 
 .header-logo {
@@ -171,7 +172,9 @@ button {
     text-align: center;
     color: #fff;
     margin-bottom: 48px;
-    max-width: 496px
+    max-width: 496px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .order-button {
@@ -295,7 +298,6 @@ button {
     width: 100%;
     height: auto;
     border-radius: 4px;
-    margin-bottom: 32px;
 }
 
 .team-info {
@@ -306,7 +308,7 @@ button {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    font-size: 24px;
+    font-size: 23px;
     font-weight: 700;
     margin-bottom: 8px;
     text-align: center;
@@ -376,7 +378,6 @@ button {
     display: block;
     width: 100%;
     height: auto;
-    margin-bottom: 16px;
 }
 
 .portfolio-item-title {
