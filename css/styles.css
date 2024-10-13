@@ -44,7 +44,6 @@ button {
     max-width: 1158px;
     margin: 0 auto;
     padding: 0 15px;
-    display: flex;
 }
 
 .section {
@@ -58,12 +57,14 @@ button {
     padding: 20px 0;
     border-bottom: 1px solid #e7e9fc;
 }
+.header-container {
+    display: flex;
+}
 
 .header-navigation {
     color: #2e2f42;
     background: #fff;
     justify-content: space-between;
-    width: 1158px;
     display: flex;
     align-items: center;
 }
@@ -120,9 +121,7 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    gap: 40px;
-    display: flex;
-    align-items: center;
+    margin-left: 25px;
 }
 
 .contact-list {
@@ -170,7 +169,7 @@ button {
     letter-spacing: 0.02em;
     text-align: center;
     color: #fff;
-    margin-bottom: 72px;
+    margin-bottom: 48px;
     max-width: 496px
 }
 
@@ -205,11 +204,13 @@ button {
     position: absolute;
     width: 1px;
     height: 1px;
-    padding: 0;
     margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
     border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .features-list {
@@ -221,7 +222,6 @@ button {
 }
 
 .feature-item {
-    display: block;
     flex-basis: calc((100% - 3 * 24px) / 4);
 }
 
@@ -355,10 +355,12 @@ button {
 
 .portfolio-item {
     width: calc((100% - 48px) / 3);
+}
+
+.partfolio-info {
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none;
-    margin-bottom: 48px;
 }
 
 .portfolio-item:nth-child(3n) {
